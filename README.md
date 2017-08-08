@@ -1,1 +1,1 @@
-# CSSGridProject
+This file is the starting project for Jesse Shaw's capstone project
