@@ -8,7 +8,7 @@
   </head>
   <body>
       <header id="page-header">
-          <H1>Jesse's Developer Resource Database test</H1>
+          <H1>Jesse's Developer Resource Database</H1>
             <nav>
             <ul>
                 <li><button class="hidden" onclick=allToggle()>All</button></li>
@@ -18,13 +18,32 @@
                 <li><button class="jqbutton" onclick="boxToggle('jq')" data-topic="jq">jQuery</button></li>
                 <li><button class="tutbutton" onclick="boxToggle('tutorial')" data-topic="tutorial">Tutorial</button></li>
                 <li><button class="projectbutton" onclick="projectsToggle('project')">Projects</button></li>
+               
             </ul>
             </nav>
+
       </header>
-      <div id="content"></div>
+            <div class="inputdiv"> 
+                <button class="inputcall">Input new Item</button>
+            </div>
+              <div class="inputform">
+                    <form class="hidden">
+                        <span>Description</span><input type="text" class="description">
+                        <span>Link</span><input type="text" class="formlink">
+                        <span>Category</span>
+                        <select name="category" class="dropdown">
+                            <option value="html">HTML</option>
+                            <option value="css">CSS</option>
+                            <option value="js">Javascript</option>
+                            <option value="jquery">jQuery</option>
+                        </select>
+                        <input type="submit" Value="Submit" class="submit">
+                    </form>
+              </div>
       <main>
         <div id="grid" data-columns>
             <div class="column size-1of3">
+            <!---
             <section class="html">
                 <h2>Mozilla Developer's Network guide how the Web Works</h2>
                 <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works">Click Here</a>
@@ -41,8 +60,10 @@
                 <h2>The Getting to Know HTML lesson from Shaye Howe's Learn to Code HTML & CSS provides an excellent intro to basic HTML, with an emphasis on semantic HTML.</h2>
                 <a href="https://www.youtube.com/watch?v=7_LPdttKXPc">Click Here</a>
             </section>
+            -->
             </div>
             <div class="column size-1of3">
+            <!--
             <section class="css">CSS</section>
             <section class="css">
                 <h2>Brad Frost's responsive design patterns page</h2>
@@ -52,19 +73,21 @@
                 <h2>Mozilla Developer Network's article Introduction to the DOM provides a good overview of jQuery</h2>
                 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">Click Here</a>
             </section>
+            -->
             </div>
             <div class="column size-1of3">
+            <!--
             <section class="js">
                 <h2>Guide to variables from tutorial point</h2>
                 <a href="https://www.tutorialspoint.com/es6/es6_variables.htm">Click Here</a>
             </section>
-
             <section class="tutorial">Tutorial</section>
             <section class="html">HTML</section>
             
             <section class="js">Javascript</section>
             <section class="jq">jQuery</section>
             <section class="tutorial">Tutorial</section>
+            -->
             </div>
         </div>
     </main>

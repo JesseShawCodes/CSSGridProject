@@ -44,12 +44,60 @@ header button {
     font-size: 14px;
 }
 
+
 .unselected {
     background-color: rgb(1, 146, 130);
     border: none;
     border: 5px rgb(7, 116, 104) solid;
 }
 
+/*Input Form Button*/
+
+.inputdiv {
+    align-items: center;
+    width: 50%;
+    margin: auto;
+}
+
+.inputdiv button {
+    width: 50%;
+    margin: auto;
+    align-content: center;
+    border: none;
+    background-color: green;
+    color: white;
+    font-size: 30px;
+    
+}
+
+/*Input Form Styles*/
+          form {
+              background-color: gray;
+              width: 600px;
+              margin: auto;
+              margin-top: 20px;
+          }
+          input {
+              width: 200px;
+              display: block;
+              margin: 10px;
+          }
+          .description {
+              width: 400px;
+              height: 400px;
+          }
+          span {
+              color: white;
+              font-size: 20px;
+              margin-left: 10px;
+          }
+          .submit {
+              width: 400px;
+              border: none;
+              background-color: green;
+              color: white;
+              font-size: 30px;
+            }
 
 
 
