@@ -1,3 +1,4 @@
+//Function to toggle subjects//
 function boxToggle(subject) {
     let a = "." + subject;
     let buttonItUp = "." + subject + "button";
@@ -9,3 +10,17 @@ function boxToggle(subject) {
       $(`${buttonItUp}`).removeClass("unselected");
     }
 }
+
+//Show input Form
+
+$(".inputcall").on("click", function(e) {
+    e.preventDefault();
+    $(".inputform form").toggleClass("hidden");
+});
+
+//Input Form Submit
+
+$("form").submit(function() {
+    var x = $("form").find(".description").val();
+});
+
