@@ -1,0 +1,126 @@
+main {
+    margin: auto;
+    width: 1300px;
+    align-content: center;
+}
+
+
+
+/*Header Styles*/
+
+header {
+    height: 100px;
+    background-color: rgb(248,248,248);
+    box-sizing: border-box;
+    color: rgb(51,51,51);
+    display: inline-block;
+    font-size: 14px;
+    width: 100%;
+}
+
+header ul {
+    align-content: center;
+    margin: auto;
+}
+
+header li {
+    list-style: none;
+    width: 100px;
+    display: inline-block;
+    font-size: 20px;
+}
+
+header li a {
+    font-size: 20px;
+}
+
+/*Buttons*/
+
+header button {
+    width: 100px;
+    background-color: rgb(102, 142, 8);
+    border: 3px rgb(126, 175, 11) solid;
+    color: white;
+    font-size: 14px;
+}
+
+.unselected {
+    background-color: rgb(1, 146, 130);
+    border: none;
+    border: 5px rgb(7, 116, 104) solid;
+}
+
+
+
+
+/*Wrapper*/
+
+
+section {
+    width: 400px;
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    
+}
+
+section:hover {
+    width: 400px;
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(155, 220, 1);
+    color: white;
+    
+}
+
+
+section > h2 {
+    padding: 10px;
+    font-size: 20px;
+}
+
+section > a {
+    padding: 10px;
+    color: #455500;
+}
+
+/*Individual boxes*/
+
+.html {
+    background-color: #E50112;
+}
+
+.css {
+    background-color: #B50B17;
+}
+
+.js {
+    background-color: #930812;
+}
+
+.jq {
+    background-color: #670008;
+    color: white;
+}
+
+.tutorial {
+    background-color: #3D0004;
+    color: white;
+}
+
+
+/* These are the classes that are going to be applied: */
+.column { float: left; }
+.size-1of3 { width: 33.333%; }
+
+/*Footer*/
+footer {
+    display: none;
+}
+
+/*Hidden*/
+
+.hidden {
+    display: none;
+}
