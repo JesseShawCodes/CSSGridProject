@@ -8,11 +8,22 @@ const resources = [{
                      descriptionVal: "MDN CSS Homepage",
                      linkVal: "https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS",
                      dropdownVal: "css"
-                 }
+                 },
+                {
+                    descriptionVal: "MDN Javascript Homepage",
+                    linkVal: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+                    dropdownVal: "js"
+                },
+                {
+                    descriptionVal: "jQuery API documentation",
+                    linkVal: "https://api.jquery.com/",
+                    dropdownVal: "jq"
+                }
                 ]
 
+//Loop to add all default resources to database
 for (var i = 0; i < resources.length; i++) {
-    $("#grid").append(`<section class="${resources[i].dropdownVal}"><h2>${resources[i].descriptionVal}</h2><a href="${resources[i].linkVal}">Click Here</a></section>`);
+    $("#grid").append(`<section class="${resources[i].dropdownVal}"><h2>${resources[i].descriptionVal}</h2><a href="${resources[i].linkVal}" target="_blank">Click Here</a></section>`);
 }
 
 
@@ -33,7 +44,15 @@ function boxToggle(subject) {
 
 $(".inputcall").on("click", function(e) {
     e.preventDefault();
-    $(".inputform form").toggleClass("hidden");
+    // $(".inputform form").toggleClass("hidden");
+    if ($(".inputform form").attr('class') === "hidden") {
+        $(".inputform form").slideDown();
+        $(".inputform form").toggleClass("hidden");
+    }
+    else if ($(".inputform form").attr('class') !== "hidden") {
+        $(".inputform form").slideUp();
+        $(".inputform form").toggleClass("hidden");
+    }
 });
 
 //Input Form Submit
