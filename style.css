@@ -1,6 +1,10 @@
+body {
+    width: 900px;
+    margin: auto;
+}
+
 main {
     margin: auto;
-    width: 1300px;
     align-content: center;
 }
 
@@ -9,13 +13,16 @@ main {
 /*Header Styles*/
 
 header {
-    height: 100px;
     background-color: rgb(248,248,248);
-    box-sizing: border-box;
-    color: rgb(51,51,51);
-    display: inline-block;
     font-size: 14px;
-    width: 100%;
+}
+
+header h1 {
+    margin: auto;
+}
+
+nav {
+    margin: auto;
 }
 
 header ul {
@@ -25,8 +32,7 @@ header ul {
 
 header li {
     list-style: none;
-    width: 100px;
-    display: inline-block;
+    display: inline;
     font-size: 20px;
 }
 
@@ -44,45 +50,104 @@ header button {
     font-size: 14px;
 }
 
+
 .unselected {
     background-color: rgb(1, 146, 130);
     border: none;
     border: 5px rgb(7, 116, 104) solid;
+    text-decoration: line-through;
 }
 
+/*Input Form Button*/
 
+.inputdiv {
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.inputdiv button {
+    width: 100%;
+    border: none;
+    background-color: green;
+    color: white;
+    font-size: 30px;
+    margin-bottom: 20px;
+    
+}
+
+/*Input Form Styles*/
+form {
+    background-color: gray;
+    width: 600px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 5px;
+}
+textarea {
+    display: block;
+    margin: 10px;
+    font-size: 20px;
+}
+input {
+    width: 200px;
+    display: block;
+    margin: 10px;
+}
+input {
+    font-size: 20px;
+}
+
+select {
+    font-size: 18px;
+    border: none;
+}
+
+.description {
+    width: 90%;
+    height: 200px;
+}
+span {
+    color: white;
+    font-size: 30px;
+    margin-left: 10px;
+}
+.submit {
+    width: 400px;
+    border: none;
+    background-color: green;
+    color: white;
+    font-size: 30px;
+}
 
 
 /*Wrapper*/
 
 
 section {
-    width: 400px;
-    display: flex;
-    margin: 10px;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 10px;
     padding: 10px;
     
 }
 
 section:hover {
-    width: 400px;
-    display: flex;
-    margin: 10px;
-    padding: 10px;
     background-color: rgb(155, 220, 1);
     color: white;
     
 }
 
-
 section > h2 {
     padding: 10px;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 section > a {
-    padding: 10px;
-    color: #455500;
+    padding: 30px;
+    font-size: 30px;
+    color: #f2f2f2;
 }
 
 /*Individual boxes*/
@@ -104,19 +169,14 @@ section > a {
     color: white;
 }
 
-.tutorial {
-    background-color: #3D0004;
-    color: white;
-}
-
-
-/* These are the classes that are going to be applied: */
-.column { float: left; }
-.size-1of3 { width: 33.333%; }
 
 /*Footer*/
 footer {
-    display: none;
+    position: relative;
+    background-color: #c1c1c1;
+    margin: auto;
+    color: black;
+    font-size: 20px;
 }
 
 /*Hidden*/

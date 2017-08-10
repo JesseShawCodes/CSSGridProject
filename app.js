@@ -1,3 +1,35 @@
+//Default Objects
+const resources = [
+{
+    descriptionVal: "MDN HTML Homepage",
+    linkVal: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+    dropdownVal: "html"
+},
+{
+    descriptionVal: "MDN CSS Homepage",
+    linkVal: "https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS",
+    dropdownVal: "css"
+},
+{
+    descriptionVal: "MDN Javascript Homepage",
+    linkVal: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    dropdownVal: "js"
+},
+{
+    descriptionVal: "jQuery API documentation",
+    linkVal: "https://api.jquery.com/",
+    dropdownVal: "jq"
+}
+];
+
+//Loop to add all default resources to database
+//TO DO: Make this a function. Function can be reused.
+for (var i = 0; i < resources.length; i++) {
+    $("#grid").append(`<section class="${resources[i].dropdownVal}"><h2>${resources[i].descriptionVal}</h2><a href="${resources[i].linkVal}" target="_blank">Click Here</a></section>`);
+}
+
+
+//Function to toggle subjects//
 function boxToggle(subject) {
     let a = "." + subject;
     let buttonItUp = "." + subject + "button";
@@ -9,3 +41,30 @@ function boxToggle(subject) {
       $(`${buttonItUp}`).removeClass("unselected");
     }
 }
+
+//Show input Form
+
+$(".inputcall").on("click", function(e) {
+    e.preventDefault();
+    // $(".inputform form").toggleClass("hidden");
+    if ($(".inputform form").attr('class') === "hidden") {
+        $(".inputform form").slideDown();
+        $(".inputform form").toggleClass("hidden");
+    }
+    else if ($(".inputform form").attr('class') !== "hidden") {
+        $(".inputform form").slideUp();
+        $(".inputform form").toggleClass("hidden");
+    }
+});
+
+//Input Form Submit
+//To Do: Update for to populate resources array at the top. May need to change const Resources to an array. Test.
+
+$("form").on("submit", function(e) {
+    e.preventDefault();
+    var descriptionVal = $("form").find(".description").val();
+    var linkVal = $("form").find(".formlink").val();
+    var dropdownVal = $("form").find(".dropdown").val();
+    $("#grid").append(`<section class="${dropdownVal}"><h2>${descriptionVal}</h2><a href="${linkVal}">Click Here</a></section>`);
+});
+

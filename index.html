@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
@@ -7,70 +7,43 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-      <header id="page-header">
-          <H1>Jesse's Developer Resource Database test</H1>
+      <header id="page-header" role="heading">
+          <h1>Jesse's Developer Resource Database</h1>
             <nav>
             <ul>
-                <li><button class="hidden" onclick=allToggle()>All</button></li>
+                <li><button class="hidden" onclick="allToggle()">All</button></li>
                 <li><button class="htmlbutton" onclick="boxToggle('html')" data-topic="html">HTML</button></li>
                 <li><button class="cssbutton" onclick="boxToggle('css')" data-topic="css">CSS</button></li>
                 <li><button class="jsbutton" onclick="boxToggle('js')" data-topic="js">JavaScript</button></li>
                 <li><button class="jqbutton" onclick="boxToggle('jq')" data-topic="jq">jQuery</button></li>
-                <li><button class="tutbutton" onclick="boxToggle('tutorial')" data-topic="tutorial">Tutorial</button></li>
-                <li><button class="projectbutton" onclick="projectsToggle('project')">Projects</button></li>
             </ul>
             </nav>
-      </header>
-      <div id="content"></div>
-      <main>
-        <div id="grid" data-columns>
-            <div class="column size-1of3">
-            <section class="html">
-                <h2>Mozilla Developer's Network guide how the Web Works</h2>
-                <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works">Click Here</a>
-            </section>
-            <section class="html">
-                <h2>Marc Cohen guide to How the Web Works in One Easy Lesson</h2>
-                <a href="http://mkcohen.com/how-the-web-works-in-one-easy-lesson">Click Here</a>
-            </section>
-            <section class="html">
-                <h2>Short video on How the Internet Works in 5 Minutes</h2>
-                <a href="https://www.youtube.com/watch?v=7_LPdttKXPc">Click Here</a>
-            </section>
-            <section class="html">
-                <h2>The Getting to Know HTML lesson from Shaye Howe's Learn to Code HTML & CSS provides an excellent intro to basic HTML, with an emphasis on semantic HTML.</h2>
-                <a href="https://www.youtube.com/watch?v=7_LPdttKXPc">Click Here</a>
-            </section>
-            </div>
-            <div class="column size-1of3">
-            <section class="css">CSS</section>
-            <section class="css">
-                <h2>Brad Frost's responsive design patterns page</h2>
-                <a href="https://bradfrost.github.io/this-is-responsive/patterns.html">Click Here</a>
-            </section>
-            <section class="jq">
-                <h2>Mozilla Developer Network's article Introduction to the DOM provides a good overview of jQuery</h2>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">Click Here</a>
-            </section>
-            </div>
-            <div class="column size-1of3">
-            <section class="js">
-                <h2>Guide to variables from tutorial point</h2>
-                <a href="https://www.tutorialspoint.com/es6/es6_variables.htm">Click Here</a>
-            </section>
 
-            <section class="tutorial">Tutorial</section>
-            <section class="html">HTML</section>
-            
-            <section class="js">Javascript</section>
-            <section class="jq">jQuery</section>
-            <section class="tutorial">Tutorial</section>
+      </header>
+            <div class="inputdiv"> 
+                <button class="inputcall">Add new item</button>
             </div>
+              <div class="inputform">
+                    <form class="hidden">
+                        <span>Description</span><textarea type="text" class="description"></textarea>
+                        <span>Link</span><input type="text" class="formlink">
+                        <span>Category</span>
+                        <select name="category" class="dropdown">
+                            <option value="default">---</option>
+                            <option value="html">HTML</option>
+                            <option value="css">CSS</option>
+                            <option value="js">Javascript</option>
+                            <option value="jq">jQuery</option>
+                        </select>
+                        <input type="submit" Value="Submit" class="submit">
+                    </form>
+              </div>
+    <main>
+        <div id="grid" data-columns>
         </div>
     </main>
-      <footer>Copyright 2016. Jesse Shaw</footer>
+    <footer>Copyright 2017. Jesse Shaw</footer>
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-    <!--<script src="https://raw.githubusercontent.com/rnmp/salvattore/master/dist/salvattore.js"></script>-->
     <script src="app.js"></script>
   </body>
 </html>
